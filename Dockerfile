@@ -16,6 +16,9 @@ RUN mvn -B clean package -DskipTests
 # attack surface — this is also what keeps the "Image Scanning" step in
 # CI fast and the vulnerability count low.
 FROM eclipse-temurin:26-jre-alpine
+
+RUN apk update && apk upgrade --no-cache
+
 WORKDIR /app
 
 # Run as non-root — required by most EKS pod security standards
