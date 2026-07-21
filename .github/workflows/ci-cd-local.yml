@@ -9,7 +9,7 @@ on:
 
 env:
   IMAGE_NAME: demo-app
-  HELM_REPO: your-org/helm-charts
+  HELM_REPO: kueshy/helm-charts
 
 permissions:
   id-token: write
